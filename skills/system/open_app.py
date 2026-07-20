@@ -3,7 +3,6 @@ from drivers.windows.system import WindowsSystem
 
 
 class OpenAppSkill(Skill):
-
     name = "open_app"
 
     description = "Launch an application."
@@ -16,11 +15,9 @@ class OpenAppSkill(Skill):
     ]
 
     def parse(self, parts):
-
         return {
             "app": " ".join(parts)
         }
 
     def execute(self, **kwargs):
-
         return WindowsSystem.open_app(kwargs["app"])
